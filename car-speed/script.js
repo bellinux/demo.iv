@@ -187,7 +187,7 @@ function plotlyStart(data) {
     const clicked = eventData.points[0].pointIndex + 1;
     console.log(data[clicked], clicked);
     changebg(
-      "https://cdn.glitch.global/cf67c781-08c5-439d-9085-3d2617b3175b/" +
+      "svg/" +
         data[clicked][0] +
         ".svg"
     );
