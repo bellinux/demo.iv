@@ -1,0 +1,49 @@
+#chart {
+  width: 900px;
+  height:500px;
+}
+
+h1 {
+  font-family: sans-serif;
+  margin-left:20px;
+  margin-top:20px;
+  
+}
+
+#info {
+    position: absolute;
+    left: 949px;
+    top: 25px;
+    width: 460px;
+    height: 300px;
+    background: transparent;
+  opacity:0;
+}
+
+#picture {
+  width: 460px;
+  height: 300px;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius:20px;
+}
+
+h2, #txt1, #txt2  {
+  font-family: sans-serif;
+  
+}
+
+#txt2{
+  
+  font-weight: 900;
+}
+#graphspeed {
+    position: absolute;
+    top: 368px;
+    left: 608px;
+    width: 300px;
+    height: 150px;
+    background: transparent;
+}

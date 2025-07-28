@@ -1,0 +1,64 @@
+h1 {
+  position: fixed;
+  width: 1920px;
+  text-align:center;
+  font-family: sans-serif;
+  z-index:9000;
+  margin-top:12px;
+}
+
+#myMap{
+  position:fixed;
+  left:10px;
+  top:-160px;
+
+}
+
+#myGraph{
+  position:fixed;
+  left:0px;
+  top:300px;
+  width:1900px;
+  height:680px;
+}
+
+#context {
+    position: fixed;
+    width: 1167px;
+    top: 213px;
+    left: 636px;
+  opacity:0
+}
+
+#additional {
+    position: fixed;
+    text-align: left;
+    font-family: sans-serif;
+    z-index: 9000;
+    margin-top: 12px;
+    top: 374px;
+    left: 103px;
+  opacity:0;
+  font-size: 120%;
+}
+
+#numeroestaciones {
+  font-weight:900;
+}
+
+#region{
+  margin: 0;
+}
+
+#station{
+    margin: 0;
+}
+
+#leggend {
+    position: fixed;
+    width: 140px;
+    top: 730px;
+    left: 1754px;
+  opacity:0;
+  z-index:9999;
+}

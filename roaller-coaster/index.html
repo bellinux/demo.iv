@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las montañas rusas más rápidas del mundo</title>
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Enlace a la biblioteca Plotly -->
+    <script src="https://cdn.plot.ly/plotly-2.34.0.min.js"></script>
+
+    <!-- Enlace a la base de datos -->
+    <script src="coaster_db.js"></script>
+
+    <script src="sonification.js" defer></script>
+</head>
+<body>
+    <div id="title">
+        <h1 style="text-align: center;">¿Dónde están las montañas rusas más rápidas?</h1>
+    </div>
+    <div id="controls">
+        
+        <select id="continentSelect">
+            <option value="World">Todos los continentes</option>
+            <option value="north america">América del Norte</option>
+            <option value="south america">América del Sur</option>
+            <option value="europe">Europa</option>
+            <option value="asia">Asia</option>
+            <option value="africa">África</option>
+            <option value="oceania">Oceanía</option>
+        </select>
+    </div>
+    
+        <div id="myMap"></div>
+        <div id="coastersList"></div>
+        <div id="hoverInfo"></div> <!-- Nuevo contenedor para hoverinfo -->
+  
+  
+  <div id="indicator">
+    ¡La montaña rusa mas rapida del mundo!
+  </div>
+  
+  
+  <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+    <script defer src="mundo.js"></script>
+  
+</body>
+</html>
+

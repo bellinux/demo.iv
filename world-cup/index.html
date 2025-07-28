@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>World Cup Map</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.plot.ly/plotly-2.34.0.min.js"></script>
+  </head>
+  <body>
+    
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+      
+
+        <div class="data-view">
+            <h2 id="country-name"></h2>
+            <p id="year-hosted"></p>
+            <div id="attendance-chart"></div> <!-- Contenedor para la gráfica de asistentes -->
+        </div>
+
+
+        <div id="map"></div>
+
+
+
+    
+    <!-- Bloque de la leyenda -->
+    <div id="legend" class="legend-container">
+        <h4>Cantidad de<br> Mundiales</h4>
+        <div class="legend-item">
+            <div class="color-box" style="background: #e6e6e6;"></div>
+            <span>0</span>
+        </div>
+        <div class="legend-item">
+            <div class="color-box" style="background: #f7e55e;"></div>
+            <span>1</span>
+        </div>
+        <div class="legend-item">
+            <div class="color-box" style="background: #ffae42;"></div>
+            <span>2</span>
+        </div>
+        <div class="legend-item">
+            <div class="color-box" style="background: #6a3d9a;"></div>
+            <span>3</span>
+        </div>
+    </div>
+
+    <!-- Incluir los scripts externos -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>

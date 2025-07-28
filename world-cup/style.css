@@ -1,0 +1,154 @@
+  body {
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+
+ 
+    
+        .data-view h2 {
+            margin: 0;
+            font-size: 2.5vw;       /* Tamaño de texto relativo al ancho de la ventana */
+            color: #333;
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+    
+        .data-view p {
+            font-size: 2vw;         /* Tamaño de texto relativo al ancho de la ventana */
+            color: #555;
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+  
+
+    
+ 
+    
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+    
+        .color-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+        }
+    
+        .infolayer {
+            /* Contenedor principal de la información */
+            position: absolute; /* Para posicionar de manera relativa a su contenedor */
+            width: calc(120%); /* Ancho 120% del contenedor #map */
+            height: calc(120%); /* Altura 120% del contenedor #map */
+            top: -10%; /* Ajusta la posición vertical (puedes modificar este valor) */
+            left: -10%; /* Ajusta la posición horizontal (puedes modificar este valor) */
+            display: flex; /* Usamos flexbox para alinear elementos si es necesario */
+            flex-direction: column; /* Dirección de los elementos hijos */
+            align-items: center; /* Alineación horizontal centrada */
+            justify-content: center; /* Alineación vertical centrada */
+            font-family: Helvetica, sans-serif; /* Fuente de texto */
+            font-size: 1vw; /* Tamaño de fuente responsivo */
+            color: rgb(0, 0, 0); /* Color de texto */
+            opacity: 1; /* Opacidad */
+            z-index: 10; /* Asegúrate de que esté sobre otros elementos */
+        }
+    
+        /* Ajustes específicos para el texto */
+        .gtitle {
+            font-weight: bold; /* Negrita para el título */
+            fill: rgb(0, 0, 0); /* Color del texto */
+            font-size: 2vw; /* Tamaño de fuente responsivo basado en el ancho de la ventana */
+            white-space: pre; /* Mantiene el espacio en blanco */
+            text-align: center; /* Centrar el texto */
+        }
+    
+        .annotation-text {
+            font-size: 1.5vw; /* Tamaño de fuente responsivo basado en el ancho de la ventana */
+            fill: rgb(0, 0, 0); /* Color del texto */
+            white-space: pre; /* Mantiene el espacio en blanco */
+        }
+    
+        .annotation-arrow-g path {
+            stroke-width: 2px; /* Grosor de la flecha */
+            stroke: rgb(0, 0, 0); /* Color de la flecha */
+        }
+    
+        .cursor-pointer {
+            cursor: pointer; /* Cambia el cursor al pasar sobre las anotaciones */
+        }
+    
+        /* Ajustes de la posición de las anotaciones */
+        .annotation {
+            opacity: 1; /* Asegura que las anotaciones sean visibles */
+        }
+    
+        .bg {
+            fill: rgba(0, 0, 0, 0); /* Fondo transparente para el área de clic */
+        }
+    
+        /* Opcional: agrega margen o padding si es necesario */
+        .annotation-text-g {
+            transform: scale(1); /* Permite escalado si es necesario */
+        }
+    
+        /* Asegúrate de que el SVG y otros elementos se ajusten también */
+        .infolayer svg {
+            width: 100%; /* Ajustar el SVG al contenedor */
+            height: auto; /* Mantener la relación de aspecto */
+        }
+
+    
+
+        .data-view {
+            width: 620px;                /* Ancho fijo de 25% */
+            height: 600px;
+            padding: 20px;
+            z-index: 9999;
+            position: absolute;
+            left: 1456px;
+            top: 22px;
+        }
+
+        .data-view h2 {
+            font-size: 1.8em;
+            color: #333;
+            text-align: center;
+        }
+
+        .data-view p {
+            font-size: 1.2em;
+            color: #555;
+            text-align: center;
+        }
+
+   
+
+        #map {
+          position:absolute;
+          top:0;
+          left:0;
+            width: 1660px;
+            height: 1000px;
+
+        }
+
+        .legend-container {
+            position: absolute;
+            top: 660px;
+            left: 48px;
+            background-color: #fff;
+            padding: 10px;
+            font-size: 1em;
+            width: 100px;
+            height: 202px;
+        }
+
+        #attendance-chart {
+            width: 100%;
+            height: 80%; /* Ajuste del tamaño de la gráfica */
+            max-height: 100%;
+        }

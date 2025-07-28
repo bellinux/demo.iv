@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arduino servo</title>
+  </head>
+  <body>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+    <h1>Smartphone car control</h1>
+    <script>
+Protobject.Arduino.start();
+Protobject.Haptic.start();
+
+Protobject.Core.onReceived((data) => {
+  if (data.speedHaptic) {
+    let vibrateTime = data.speedHaptic;
+    let stopTime = 458 - data.speedHaptic;
+    let vibrationPattern = [];
+    for (let i = 0; i < 30; i++) {
+      vibrationPattern.push(vibrateTime / 2);
+      vibrationPattern.push(stopTime / 4);
+    }
+
+    Protobject.Haptic.vibrate(vibrationPattern);
+  }
+
+  if (data.speedServo) {
+    Protobject.Haptic.vibrate(0);
+    let targetSpeed = data.speedServo * 2; // Velocità target
+    let currentSpeed = 0; // Velocità iniziale
+    let stepDuration = 50; // Durata di ogni passo in ms
+    let transitionDuration = 1000; // Durata totale per raggiungere la velocità target
+    let steps = transitionDuration / stepDuration; // Numero di passi
+    let tolerance = 0.5; // Tolleranza per considerare la velocità raggiunta
+    let increment = 0;
+
+    const adjustSpeed = (newTargetSpeed, onComplete) => {
+      increment = (newTargetSpeed - currentSpeed) / steps;
+      const speedInterval = setInterval(() => {
+        // Aggiorna la velocità gradualmente
+        currentSpeed += increment;
+
+        // Controlla se la velocità è sufficientemente vicina al target
+        if (Math.abs(currentSpeed - newTargetSpeed) <= tolerance) {
+          currentSpeed = newTargetSpeed; // Imposta esattamente il valore target
+          Protobject.Arduino.contServoWrite({ pin: 6, value: currentSpeed });
+          clearInterval(speedInterval); // Ferma l'intervallo
+          if (onComplete) onComplete(); // Esegui l'azione successiva
+          return;
+        }
+
+        // Aggiorna la velocità
+        Protobject.Arduino.contServoWrite({ pin: 6, value: currentSpeed });
+      }, stepDuration);
+    };
+
+    // Prima transizione: raggiungi la velocità target
+    adjustSpeed(targetSpeed, () => {
+      // Dopo 1 secondo, torna indietro
+      setTimeout(() => {
+        adjustSpeed(-targetSpeed, () => {
+          // Dopo 1 altro secondo, ferma il servo
+          setTimeout(() => {
+            adjustSpeed(0);
+          }, 1000);
+        });
+      }, 1000);
+    });
+  }
+});
+
+    </script>
+  </body>
+</html>

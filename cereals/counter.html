@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movement sensor</title>
+  </head>
+  <body>
+    
+        <h1>Mov sensor</h1>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+
+
+    <script>
+      let oldMagnitude;
+      Protobject.CameraMovement.start(30, 1); //generate events each 300 ms; 0 is the webcam id
+      Protobject.CameraMovement.showPreview({
+        top: 100,
+        left: 0,
+        width: 640,
+        height: 480,
+      });
+      Protobject.CameraMovement.setThreshold(16);
+      Protobject.CameraMovement.onData((data) => {
+        if (oldMagnitude!=data.magnitude){
+          console.log(data);
+          Protobject.Core.send({ mov: data.magnitude/10000 }).to("index.html");
+          oldMagnitude=data.magnitude
+        }
+        
+      });
+    </script>
+  </body>
+</html>

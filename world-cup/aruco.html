@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arduino</title>
+  </head>
+  <body>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+    <h1>Aruco page</h1>
+    <script>
+      const arucoMarkers = {
+        1: "Uruguay",
+        2: "Italy",
+        3: "France",
+        4: "Brazil",
+        5: "Switzerland",
+        6: "Sweden",
+        7: "Chile",
+        8: "United Kingdom",
+        9: "Mexico",
+        10: "Germany",
+        11: "Argentina",
+        12: "Spain",
+        13: "USA",
+        14: "South Korea",
+        15: "Japan",
+        16: "South Africa",
+        17: "Russia",
+        18: "Qatar",
+        19: "Canada",
+      };
+
+      // Inicializa el sistema Aruco
+      Protobject.Aruco.start(30, 0);
+      Protobject.Aruco.showPreview({
+        top: 100,
+        left: 100,
+        width: 640,
+        height: 360,
+      });
+
+      // Detecta marcadores Aruco
+      Protobject.Aruco.onData((data) => {
+        const detectedMarkers = Object.keys(data);
+
+        if (detectedMarkers.length === 0) {
+          Protobject.Core.send(false).to("index.html");
+        } else {
+          detectedMarkers.forEach((markerId) => {
+            const country = arucoMarkers[markerId];
+
+            if (country) {
+              Protobject.Core.send(country).to("index.html");
+            } else {
+              console.warn(`Marcador ${markerId} no asignado a ningún país.`);
+              Protobject.Core.send(false).to("index.html");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand sensor</title>
+  </head>
+  <body>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+    <h1>Hand sensor</h1>
+    
+    <script>
+      Protobject.HandSensor.start(100, 0);
+
+      Protobject.HandSensor.showPreview({
+        top: 0,
+        left: 0,
+        width: 375,
+        height: 375,
+      });
+      Protobject.HandSensor.flip(true);
+
+      Protobject.HandSensor.onData((data) => {
+        if (data.landmarks && data.landmarks[0] && data.landmarks[0][8]) {
+          Protobject.Core.send(data.landmarks[0][8]).to("index.html");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movement sensor</title>
+  </head>
+  <body>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+    <h1>Chocapic presence</h1>
+    <p id="conf"></p>
+    <button id="reset">Reset baseline</button>
+
+    <script>
+      document.getElementById("reset").addEventListener("click", function() {
+        Protobject.PresenceSensor.setNewBaseline();
+      });
+      
+      Protobject.PresenceSensor.setBaselineAndStartMonitoring(200, 1); //generate events each 300 ms; 0 is the webcam id
+      Protobject.PresenceSensor.showPreview({
+        top: 200,
+        left: 00,
+        width: 640,
+        height: 480,
+      });
+      let prevValue = false;
+      Protobject.PresenceSensor.onData((similarity) => {
+        
+        document.getElementById("conf").innerHTML = similarity;
+        //console.log(similarity);
+        if (similarity < 0.6) {
+          if (prevValue == false) {
+            prevValue = true;
+            Protobject.Core.send({ chocapic: false }).to("index.html");
+            console.log(false)
+          }
+        } else {
+          if (prevValue == true) {
+            prevValue = false;
+            Protobject.Core.send({ chocapic: true }).to("index.html");
+            console.log(true)
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

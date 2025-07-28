@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand sensor</title>
+  </head>
+  <body>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+    <h1>Hand sensor</h1>
+
+    <script>
+      // Iniciar el HandSensor
+      Protobject.HandSensor.start(100, 0);
+
+      // Mostrar la vista previa del video en la posición y tamaño especificados
+      Protobject.HandSensor.showPreview({
+        top: 0,
+        left: 0,
+        width: 1280 / 2,
+        height: 720 / 2,
+      });
+
+      // Hacer flip horizontal de la imagen
+      Protobject.HandSensor.flip(false);
+
+      // El punto 8 corresponde al dedo índice
+      // Enviar la posición del índice a 'main.js'
+      Protobject.HandSensor.onData((data) => {
+        if (data.landmarks && data.landmarks[0] && data.landmarks[0][8]) {
+          Protobject.Core.send(data.landmarks[0][8]).to("index.html");
+        }
+      });
+    </script>
+  </body>
+</html>

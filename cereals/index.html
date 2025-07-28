@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Cereales</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.plot.ly/plotly-2.34.0.min.js"></script>
+    <script src="https://unpkg.com/tone"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://raw.githubusercontent.com/basy-medy/proyecto_infovis/main/sello.png"
+          alt="Logo"
+          class="logo"
+        />
+        <div class="text">
+          <p>
+            En el año 2012, se aprobó la
+            <a href="https://www.bcn.cl/leychile/navegar?idNorma=1041570"
+              ><b>Ley de Sellos (N° 20606)</b></a
+            >, cuyo principal objetivo era fomentar hábitos saludables en Chile
+            mediante un etiquetado claro y sencillo. Como resultado, algunos
+            cereales modificaron sus fórmulas, reduciendo principalmente la
+            cantidad de azúcares por porción.
+          </p>
+        </div>
+      </div>
+      
+      <h1 id="cerealname">
+       
+      </h1>
+
+
+      <div class="chart-container">
+        <div id="myDiv" class="chart-box"></div>
+        <!-- Initially visible -->
+        <div id="newDiv" class="chart-box" style="display: none"></div>
+        <!-- Initially hidden -->
+       
+        <div id="sugarBar">
+
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://app.protobject.com/framework/p.js"></script>
+  <script src="config.js"></script>
+
+  <script src="script.js" defer></script>
+</html>

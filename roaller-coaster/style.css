@@ -1,0 +1,188 @@
+* {
+    font-family: Arial, sans-serif;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+#mapContainer {
+    width: 1844px;  /* Ajusta según tus necesidades */
+     /* Ajusta según tus necesidades */
+    height: 9000px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    background: transparent;
+}
+
+#myMap {
+    
+     /* Centrar horizontalmente */
+     /* Ajuste para centrar */
+    pointer-events: visible;
+    width: 1200px;
+    height: 800px;
+    position: absolute;
+    left: 225px;
+    margin-top: unset;
+    top: 80px;
+}
+
+#coastersList h2 {
+    margin-bottom: 15px; /* Espacio debajo del título */
+    text-transform: uppercase;
+    color: #777;
+    font-weight: 900;
+}
+
+#coastersList div {
+    margin-bottom: 10px; /* Espacio entre nombres */
+    color: #222;
+}
+
+#coastersList {
+    width: 376px;
+    padding: 2px;
+    overflow-y: auto;
+    font-size: 20px;
+    font-weight: 200;
+    color: #777777;
+    position: absolute;
+    top: 356px;
+    left: 41px;
+}
+
+
+#controls {
+     /* Centrar horizontalmente */
+     z-index: 99999;
+     position: absolute;
+     left: 64px;
+     top: 200px;
+}
+
+/* Aggiungi una freccia personalizzata */
+#controls::after {
+  content: '▼'; /* Simbolo della freccia */
+  position: absolute;
+  right: 10px; /* Posizione a destra */
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #333;
+  pointer-events: none; /* Non interferisce con il clic */
+}
+
+#details {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;  /* Inicialmente está oculto */
+    max-width: 300px; /* Ancho máximo para el contenedor */
+    position: absolute; /* Para que se pueda mover si es necesario */
+    z-index: 10; /* Para asegurarse de que quede encima de otros elementos */
+}
+
+#title {
+     /* Centrar horizontalmente */
+     position: absolute; /* Cambiar a relativo */
+     z-index: 999;
+     top: 55px;
+     left: 62px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #333;
+}
+
+span {
+    display: block;
+    margin-top: 2px;
+}
+#info{
+    margin-top: 6px;
+    color: #777777;
+    text-transform: uppercase;
+}
+#infor{
+    margin-top: 6px;
+    color: red;
+}
+h2
+{
+    margin-left: 0.5em;
+}
+
+#hoverInfo {
+    padding: 30px;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 236px;
+    font-size: 120%;
+    left: 1363px;
+}
+
+.ranked-item {
+    display: flex;
+    align-items: flex-start; /* Alinea el texto en la parte superior */
+    font-weight: bold;    
+}
+.rank {
+    width: 2em; /* Ajusta el ancho según necesites */
+    text-align: right;
+    margin-right: 0.5em; /* Espaciado entre número y nombre */
+    flex-shrink: 0; /* Evita que el número se reduzca */
+}
+
+.name {
+    flex: 1; /* Permite que el nombre ocupe el resto del espacio */
+    word-wrap: break-word; /* Asegura que los nombres largos se ajusten */
+}
+
+#continentSelect {
+  width: 200px; /* Larghezza del menu */
+  padding: 10px; /* Spaziatura interna */
+  font-size: 16px; /* Dimensione del testo */
+  border: 2px solid #000000; /* Bordo */
+  border-radius: 5px; /* Angoli arrotondati */
+  background-color: #f9f9f9; /* Colore di sfondo */
+  color: #333; /* Colore del testo */
+  appearance: none; /* Rimuove lo stile predefinito */
+  cursor: pointer; /* Cursore personalizzato */
+}
+
+/* Aggiungi uno stile per il focus */
+#continentSelect:focus {
+  outline: none;
+  border-color: #45a049; /* Colore del bordo quando è attivo */
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5); /* Effetto di ombreggiatura */
+}
+
+/* Freccia personalizzata (opzionale, richiede un contenitore) */
+#continentSelect::after {
+  content: ''; /* Aggiungi contenuto vuoto per la freccia */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #333; /* Colore della freccia */
+}
+
+#indicator {
+    position: absolute;
+    top: 332px;
+    left: 1010px;
+    border-bottom: 2px solid #333;
+    transform: rotate(-23deg);
+    width: 384px;
+    text-align: center;
+    font-size: 17px;
+    background: rgba(255, 255, 255,0.8);
+}

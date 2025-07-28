@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arduino</title>
+  </head>
+  <body>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+    <h1>Arduino page</h1>
+    <script>
+
+      
+      
+      function detach(){
+        setTimeout(() => {
+          Protobject.Arduino.servoWrite({ pin: 5, value: 0 });
+        }, 150);
+      }
+      
+      Protobject.Arduino.start().then(function(){
+        //posicion mas alta
+        Protobject.Arduino.servoWrite({ pin: 5, value: 800 });
+        detach()
+        
+      });
+
+
+
+      Protobject.Core.onReceived((data) => {
+       
+        console.log(data)
+        
+        
+        //posicion inicial
+        Protobject.Arduino.servoWrite({ pin: 5, value: data*100 });
+        detach();
+        
+        
+        
+        //lanzmiento
+        setTimeout(() => {
+          Protobject.Arduino.servoWrite({ pin: 5, value: -(data*100) });
+          detach()
+        }, 1000);
+        
+        
+        
+        
+        //vuelve a posicion mas alta
+        setTimeout(() => {
+          Protobject.Arduino.servoWrite({ pin: 5, value: 800 });
+          detach()
+        }, 2000);
+            
+
+      });
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <script src="https://cdn.plot.ly/plotly-2.34.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js"></script>
+    
+    
+    
+    <title>Lluvia en Chile</title>
+
+
+    <link rel="stylesheet" href="style.css" />
+
+    
+  </head>
+  <body>
+     <h1>
+      Precipitaciones en Chile a lo largo del tiempo
+    </h1>
+    <div id="myMap"></div>
+    <div id="additional">
+      <h3 id="region">
+        Region metropolitana
+      </h3>
+      <p id="station">
+        <span id="numeroestaciones">50</span> estaciones de medici&ograve;n
+      </p>
+    </div>
+    <img id="context" src="https://cdn.glitch.global/246b900a-4db3-4b00-a8f9-7d5be89d437b/context-lluvia.svg?v=1735756927008" />
+    <img id="leggend" src="https://cdn.glitch.global/246b900a-4db3-4b00-a8f9-7d5be89d437b/leggend.svg?v=1735757360665" />
+    <div id="myGraph"></div>
+    
+   <audio id="highRain" src="https://cdn.glitch.global/246b900a-4db3-4b00-a8f9-7d5be89d437b/high.mp3" preload="auto"></audio>
+    <audio id="mediumRain" src="https://cdn.glitch.global/246b900a-4db3-4b00-a8f9-7d5be89d437b/medium.mp3" preload="auto"></audio>
+    <audio id="lowRain" src="https://cdn.glitch.global/246b900a-4db3-4b00-a8f9-7d5be89d437b/low.mp3" preload="auto"></audio>
+ 
+
+  </body>
+  <script src="script.js" defer></script>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+  <script src="config.js"></script>
+</html>

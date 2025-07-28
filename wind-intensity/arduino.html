@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arduino servo</title>
+  </head>
+  <body>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+    <h1>Arduino servo control</h1>
+    <script>
+      Protobject.Arduino.start();
+
+      // Ángulo actual del servo
+      let currentAngle = 0; // Valor inicial del ángulo actual
+      let targetAngle = 0; // Valor hacia el que se quiere mover el servo
+      let updateInterval = null; // Variable para almacenar el intervalo de actualización
+
+      // Función para actualizar gradualmente el ángulo del servo
+      function smoothUpdateServo(target) {
+        if (updateInterval) {
+          clearInterval(updateInterval); // Detiene cualquier intervalo previo si está activo
+        }
+
+        updateInterval = setInterval(() => {
+          // Si el ángulo actual es menor que el objetivo, incrementa
+          if (currentAngle < target) {
+            currentAngle=currentAngle+4;
+          }
+          // Si el ángulo actual es mayor que el objetivo, decrementa
+          else if (currentAngle > target) {
+            currentAngle=currentAngle-4;
+          }
+          // Si el ángulo actual es igual al objetivo, detiene el intervalo
+          else {
+            clearInterval(updateInterval); // Detiene el intervalo cuando se alcanza el objetivo
+            updateInterval = null;
+          }
+
+          // Escribe el ángulo actual al servo
+          Protobject.Arduino.servoWrite({ pin: 5, value: currentAngle });
+        }, 10); // Actualiza el ángulo cada 10 ms
+      }
+
+      // Evento que se activa al recibir datos
+      Protobject.Core.onReceived((data) => {
+        // Calcula el nuevo ángulo objetivo a partir de los datos recibidos
+        targetAngle = parseInt(data.angle - 180) * 4;
+
+        // Si el viento es 0, detiene el servo continuo
+        if (data.wind == 0) {
+          Protobject.Arduino.contServoWrite({ pin: 6, value: 0 });
+        }
+        // Si hay viento, mueve el servo gradualmente y ajusta la velocidad del servo continuo
+        else {
+          smoothUpdateServo(targetAngle); // Actualiza el ángulo de forma gradual
+          let wind=(data.wind * 30)-400
+          console.log(wind)
+          Protobject.Arduino.contServoWrite({ pin: 6, value: wind });
+        }
+      });
+    </script>
+  </body>
+</html>

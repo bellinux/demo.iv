@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Electricidad en Chile</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+    <h1>Consumo de energía per cápita <br> por región en Chile (2020)</h1>
+        <div id="triangle"></div>
+        <div id="mapa"></div>
+        <div id="contexto"><img src="https://cdn.glitch.global/e50c619e-a18f-4a8d-aa8e-72af531db904/elect-context.svg?v=1735872922409" /></div>
+
+        <div id="info-box">
+            <h4 id="region-name"></h4>
+            <p id="region-info"></p>
+            <div id="consumption-bar-container">
+                <div id="consumption-bar"></div>
+                <div class="tick-label tick-label-0">0M</div>
+                <div class="tick-label tick-label-10">10M</div>
+                <div class="tick-label tick-label-20">20M</div>
+                <div class="tick-label tick-label-30">30M</div>
+                <div class="tick-label tick-label-40">40M</div>
+                <div class="tick-label tick-label-50">50M</div>
+                <div class="tick-label tick-label-60">60M</div>
+            </div>
+            <p id="extra-info"></p>
+        </div>
+        <footer>
+            <p> Fuentes:
+                <a href="https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_ESTADIST_REGIONAL/MN_REGIONAL1/EST_REG_POB_TOT">Banco Central de Chile</a>
+                y
+                <a href="https://energia.gob.cl/pelp/balance-nacional-de-energia">Ministerio de Energía</a>
+            </p>
+        </footer>
+  </body>
+   <script src="https://cdn.plot.ly/plotly-2.34.0.min.js" defer></script>
+  <script src="script.js" defer></script>
+</html>

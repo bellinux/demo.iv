@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Expenditure as Percentage of GDP</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  
+
+</head>
+<body>
+      <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+   <h1>Military Expenditure by % of GDP</h1>
+  <link rel="stylesheet" href="style.css" />
+    <!-- Slider for Year Selection -->
+    <div id="slider-container">
+        <label for="yearRange">Year</label>
+        <input type="range" min="1960" max="2018" value="2018" id="yearRange">
+      <span id="yearLabel">2018</span>
+    </div>
+
+    <div id="map"></div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>

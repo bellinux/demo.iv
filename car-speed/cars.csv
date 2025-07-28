@@ -1,0 +1,19 @@
+D,Fecha,Pais,Marca,Modelo,Velocidad,Comentario,Especial,Color
+1,1902,Alemania,Mercedes,Simplex,113,"Producido de 1902 a 1909, el Simplex podía tener 40 o 60 caballos de fuerza, siendo esta última la que lo llevaba a rebasar los 100 km/h. Este modelo le ayudó a Mercedes a colocarse como líder dentro de la industria.",Primer auto en superar los 100 km/h.,red
+2,1911,Austria,Austro-Daimler,Prinz Heinrich,136,"Diseñado por Ferdinand Porsche,  contaba con un motor de cuatro cilindros con árbol de levas en cabeza de 5714 cc, rápidamente se hizo famoso. Podría desarrollar 95 caballos a 2100 rpm.",,grey
+3,1929,Estados Unidos,Duesenberg,Model J,191,"El Duesenberg Model J se acercó bastante a los 200 km/h con su motor ocho cilindros en línea con 265 caballos de fuerza. El auto estaba pensado para competir contra lo más lujoso y rápido que la industria podía ofrecer, y cumplía en ambos rubros.",,grey
+4,1949,Inglaterra,Jaguar,XK120,200.5,"12055 producidos, 180 HP, Algunas publicaciones citan la velocidad máxima cronometrada del XK120 en casi 214 km/h (133 mph) en 1949. El XK120 que alcanzó esta velocidad era un prototipo modificado, no un automóvil de producción. El coche de producción alcanzó los 200,5 km/h.",Primer auto en superar los 200 km/h.,red
+5,1955,Alemania,Mercedes-Benz,300 SL,242.5,"3258 producidos, 240 HP, velocidad media bidireccional probada por Automobil Revue en 1958. Alcanzó 245 km/h (152,2 mph) en una dirección.",,grey
+6,1959,Inglaterra,Aston Martin,DB4 GT,245,"75 producidos, 302 HP",,grey
+7,1967,Italia,Lamborghini,Miura P400,276,"350 HP, Testeado por la revista Motor en junio 1967. Mas de 750 unidades construidas entre 1966–1973, incluyendo las versiones P400, P400 S y P400 SV.",,grey
+8,1968,Italia,Ferrari,Daytona GTB/4,280,"1284 producidos, 352 HP",,grey
+9,1971,Italia,Lamborghini,Countach LP400,288,370 HP,,grey
+10,1982,Italia,Lamborghini,Countach LP500s,292,"375 HP, 323 producidos",,grey
+11,1986,Alemania,Porsche,959,315,"Su producción es de 337 unidades, con un motor biturbo de 444 HP",Primer auto en superar los 300 km/h.,red
+12,1987,Italia,Ferrari,F40,324,"De este superdeportivo de Ferrari se fabricaron 1315 unidades hasta 1992, con un V8 biturbo de 471 HP",,red
+13,1987,Alemania,Ruf,CTR,342,"Tuvo una producción total de 29 unidades, con un motor bóxer de 6 cilindros con 463 HP",,red
+14,1992,Inglaterra,McLaren,F1,356,"Con 70 unidades producidas, 618 HP. Algunas publicaciones citan la velocidad máxima cronometrada del F1 como 240,1 mph (386,4 km/h). Esta velocidad se logró con un F1 modificado con el limitador de revoluciones elevado de 7500 rpm a 8300 rpm, no con un coche de producción. El F1 sin modificar está limitado a 221 mph (356 km/h).",,grey
+15,2005,Francia,Bugatti,Veyron EB,407,"300 ejemplares producidos, 987 HP, record registrado y verificado por inspectores alemanes oficiales el 19 de abril de 2005.",Primer auto en superar los 400 km/h.,red
+16,2007,Estados Unidos,SSC,Ultimate Aero,412,"Motor V8 twin-turbo de 6.3 litos, record grabado y verificado por técnicos de los Guinness World Records. Fueron construidos 24 ejemplares entre 2006 y 2007",,grey
+17,2010,Francia,Bugatti,Veyron Super Sport,431,"Esta versión especial del Chiron tiene 1578 HP, 99 HP más que el Chiron regular. Solamente tiene unos cambios de aerodinámica, además de la velocidad punta, lo que lo convierte en el automóvil más veloz del mundo, con diferencia además de su precio de más de US$ 3 millones. La marca fue lograda por el piloto de carreras Andy Wallace en un modelo negro y naranja, los mismos colores que su predecesor el Veyron Super Sport, convirtiéndose así en el primero en superar las 300 mph (483 km/h)",,grey
+18,2017,Suecia,Koenigsegg,Agera RS,458,"Utiliza una caja de cambios de doble embrague de 7 velocidades con levas en el volante, con una potencia máxima de 1144 HP. Este coche fue el que en 2017, le quitaría oficialmente el récord al Bugatti Veyron Super Sport.",El auto más rápido del mundo.,red

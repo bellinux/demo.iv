@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  text-align: left;
+  margin: 30px;
+}
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  margin-left: 44px;
+}
+#chart {
+  width: 1180px;
+  height: 600px;
+}
+.conte-degradado {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: none;
+}
+
+#direction{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 1140px;
+  top: 130px;
+  opacity:0;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evolución de los Medallistas de 100m en las Olimpiadas</title>
+    <script src="https://cdn.plot.ly/plotly-2.34.0.min.js"></script>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+
+    <div id="myDiv"></div>
+    <div id="hover-info">
+      <img id="img" />
+      <div id="hover-details">
+        <span id="winner-name"></span>
+        <span id="year"></span>
+        <span id="time"></span>
+        <span id="message-info"></span>
+      </div>
+    </div>
+    <audio
+      id="running-sound"
+      src="https://cdn.glitch.global/58139a42-7535-4c09-8b8a-685b214bd2c4/corriendoloop.mp3?v=1735674626640"
+      preload="auto"
+    ></audio>
+
+    <script src="script.js" defer></script>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+  </body>
+</html>
