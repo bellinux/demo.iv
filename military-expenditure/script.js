@@ -94,19 +94,19 @@ function playSoundByPercentage(percentage) {
 
     let sound;
     if (percentage > 5) {
-        sound = new Audio('https://cdn.glitch.global/143ac0c6-0f93-4e2a-8428-5efc3bc3b4ae/sounds/level_6.mp3');
+        sound = new Audio('sounds/level_6.mp3');
     } else if (percentage > 4) {
-        sound = new Audio('https://cdn.glitch.global/143ac0c6-0f93-4e2a-8428-5efc3bc3b4ae/sounds/level_5.mp3');
+        sound = new Audio('sounds/level_5.mp3');
     } else if (percentage > 3) {
-        sound = new Audio('https://cdn.glitch.global/143ac0c6-0f93-4e2a-8428-5efc3bc3b4ae/sounds/level_4.mp3');
+        sound = new Audio('sounds/level_4.mp3');
     } else if (percentage > 2) {
-        sound = new Audio('https://cdn.glitch.global/143ac0c6-0f93-4e2a-8428-5efc3bc3b4ae/sounds/level_3.mp3');
+        sound = new Audio('sounds/level_3.mp3');
     } else if (percentage > 1) {
-        sound = new Audio('https://cdn.glitch.global/143ac0c6-0f93-4e2a-8428-5efc3bc3b4ae/sounds/level_2.mp3');
+        sound = new Audio('sounds/level_2.mp3');
     } else if (percentage > 0) {
-        sound = new Audio('https://cdn.glitch.global/143ac0c6-0f93-4e2a-8428-5efc3bc3b4ae/sounds/level_1.mp3');
+        sound = new Audio('sounds/level_1.mp3');
     } else {
-        sound = new Audio('https://cdn.glitch.global/143ac0c6-0f93-4e2a-8428-5efc3bc3b4ae/sounds/level_error.mp3');  // Sin información o 0%
+        sound = new Audio('sounds/level_error.mp3');  // Sin información o 0%
     }
 
     currentSound = sound;  // Set the new sound as the current sound

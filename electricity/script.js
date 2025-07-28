@@ -1,7 +1,7 @@
 const geojsonUrl = "regiones.json";
 const consumo_relativo = "ConsumoRelativo.csv";
 
-const audio = new Audio("https://matilab.github.io/sound.mp3");
+const audio = new Audio("sound.mp3");
 audio.playbackRate=3;
 let audioInterval;
 

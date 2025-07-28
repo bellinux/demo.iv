@@ -272,13 +272,13 @@ function updateAttendanceChart(country) {
 
 // Cargar el audio de hinchada
 const cheerAudio = new Audio(
-  "https://cdn.glitch.global/daa61ffb-a915-49a1-95a6-f9f5003bb14a/cheer.mp3"
+  "sounds/cheer.mp3"
 );
 const cheerMaxAudio = new Audio(
-  "https://cdn.glitch.global/daa61ffb-a915-49a1-95a6-f9f5003bb14a/max_cheer.mp3"
+  "sounds/max_cheer.mp3"
 );
 const No_encontrado = new Audio(
-  "https://cdn.glitch.global/daa61ffb-a915-49a1-95a6-f9f5003bb14a/no_hay_datos.m4a"
+  "sounds/no_hay_datos.m4a"
 );
 
 // Función para calcular el volumen basado en el número de asistentes

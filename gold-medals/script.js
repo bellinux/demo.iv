@@ -345,7 +345,7 @@ fetch("medallistas.json")
       const city = data.points[0].customdata[2];
       console.log(data.points[0]);
       const winner = data.points[0].customdata[0];
-      const photo = `./public/${data.points[0].customdata[1]}`;
+      const photo = `./${data.points[0].customdata[1]}`;
       const time = data.points[0].y;
       const messageInfo = extraMessageInfo(year, time);
       //console.log(data);
@@ -354,7 +354,7 @@ fetch("medallistas.json")
       document.getElementById("winner-name").innerText = winner;
       document.getElementById("year").innerText = `${city}, ${year}`;
       document.getElementById("time").innerText = time;
-      document.getElementById("img").src = "https://lolenn10.github.io/E1-Infovis/"+photo;
+      document.getElementById("img").src = "img/"+photo;
       document.getElementById("img").alt = winner;
       document.getElementById("message-info").innerText = messageInfo.message;
       document.getElementById("message-info").style.color = messageInfo.color;
