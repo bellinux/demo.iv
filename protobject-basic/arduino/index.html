@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamp</title>
+  </head>
+  <body>
+    <script src="https://app.protobject.com/framework/p.js"></script>
+    <script src="config.js"></script>
+    <script>
+      const perilla = new Protobject.Knob({ min: -1500, max: 1500 });
+
+      perilla.onChange((value) => {
+        Protobject.Core.send({ speed: value }).to("arduino.html");
+      });
+    </script>
+  </body>
+    <style>
+    #ProtobjectPlusButton {
+      width: 80px !important;
+    }
+
+    #ProtobjectPlusButton:after {
+      content: " Connect";
+    }
+  </style>
+</html>
+ 
