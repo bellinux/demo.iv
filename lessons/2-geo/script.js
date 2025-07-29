@@ -114,15 +114,9 @@ myPlot.on("plotly_unhover", function (data) {
 
 let timeout;
 // Se definen los audios para 3 niveles de intensidad de terremoto
-const highAudio = new Audio(
-  "https://cdn.glitch.global/ec4be6ed-9cc9-4b4b-b056-ea6bcce0e3bf/high.mp3?v=1740928055904"
-);
-const mediumAudio = new Audio(
-  "https://cdn.glitch.global/ec4be6ed-9cc9-4b4b-b056-ea6bcce0e3bf/medium.mp3?v=1740928072717"
-);
-const lowAudio = new Audio(
-  "https://cdn.glitch.global/ec4be6ed-9cc9-4b4b-b056-ea6bcce0e3bf/low.mp3?v=1740928068439"
-);
+const highAudio = new Audio("high.mp3");
+const mediumAudio = new Audio("medium.mp3"));
+const lowAudio = new Audio("low.mp3");
 
 myPlot.on("plotly_click", function (data) {
   // Activa el efecto de terremoto visual en el gráfico (usando https://esqsoft.com/javascript_examples/earthquake)
