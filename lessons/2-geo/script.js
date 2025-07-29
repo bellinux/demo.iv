@@ -115,7 +115,7 @@ myPlot.on("plotly_unhover", function (data) {
 let timeout;
 // Se definen los audios para 3 niveles de intensidad de terremoto
 const highAudio = new Audio("high.mp3");
-const mediumAudio = new Audio("medium.mp3"));
+const mediumAudio = new Audio("medium.mp3");
 const lowAudio = new Audio("low.mp3");
 
 myPlot.on("plotly_click", function (data) {
