@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Terremotos</title>
+    <script src="https://cdn.plot.ly/plotly-2.34.0.min.js"></script>
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <div id="title">
+      <h1>Terremotos de Chile desde el 2000</h1>
+    </div>
+    <div id="details">
+      <span id="nombre"></span>
+      <span id="regiones"></span>
+      <span id="muertos"></span>
+      <span id="magnitud"></span>
+      <span id="tzunami"
+        ><img
+          src="https://cdn.glitch.global/ec4be6ed-9cc9-4b4b-b056-ea6bcce0e3bf/tzunami.png?v=1740928075376"
+      /></span>
+    </div>
+    <div id="myMap"></div>
+    <!-- El contexto inicial se diseñó manualmente con Inkscape y está superpuesto -->
+    <!-- En la clase precedente, en cambio, se usaron anotaciones (annotations) y formas (shapes) en Plotly.js -->
+    <img
+      id="context"
+      src="https://cdn.glitch.global/ec4be6ed-9cc9-4b4b-b056-ea6bcce0e3bf/map.svg?v=1740928070271"
+    />
+  </body>
+  <script charset="UTF-8" src="efecto-terremoto.js"></script>
+  <script charset="UTF-8" src="script.js"></script>
+</html>
